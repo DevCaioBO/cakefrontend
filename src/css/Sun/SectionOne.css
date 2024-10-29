@@ -1,0 +1,183 @@
+
+/* Alinhamento do formulário */
+.form-sun-mode-body{
+    display: flex;
+    width: 600px;
+    height: 500px;
+    margin: 5% auto;
+    border: 2px solid #fff;
+    flex-direction: column;
+    background-color: #9B9CE9;
+    border-radius: 5px;
+    align-items: center;
+    
+    
+}
+/* alinhamento do título no form  */
+.column-row-sectionone-one{
+    display: flex;
+    color: #fff;
+    border-radius: 100px 100px 50px 50px;
+    background-color: #3d348b7a;
+    width: 400px;
+    height: 67px;
+ 
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.row-forms-styles{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 85%;
+    column-gap: 45px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.column-register-revenues{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.column-register-revenues input{
+    background-color: transparent;
+    width: 150px;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+}
+
+.buttons-register-revenues{
+    display: flex;
+    row-gap: 40px;
+    margin-top: 35px;
+    flex-direction: column;
+    
+}
+.buttons-register-revenues{
+    display: flex;
+    row-gap: 25px;
+    margin-top: 35px;
+    flex-direction: column;
+    
+}
+.register-revenue-button{
+    background-color: #F7B801;
+    border: none;
+    border-radius: 800px;
+    width: 350px;
+    height: 55px;
+    color: #000;
+    cursor: pointer;
+}
+.register-ingredient-button{
+    background-color: #f7ba0159;
+    border: none;
+    border-radius: 800px;
+    width: 350px;
+    height: 55px;
+    color: #00000088;
+    cursor: not-allowed;
+}
+
+@media (max-width:750px){
+    .form-sun-mode-body{
+        display: flex;
+        width: 400px;
+        height: 600px;
+        margin: 5% auto;
+        border: 2px solid #fff;
+        flex-direction: column;
+        background-color: #9B9CE9;
+        justify-content: space-around;
+        border-radius: 5px;
+        align-items: center;
+        
+        
+    }
+    .row-forms-styles{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column-row-sectionone-one{
+        display: flex;
+        color: #fff;
+        border-radius: 100px 100px 50px 50px;
+        background-color: #3d348b7a;
+        width: 90%;
+        height: 67px;
+     
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    
+    }
+    
+}
+
+@media (max-width:425px){
+    .form-sun-mode-body{
+        display: flex;
+        width: 300px;
+        height: 600px;
+        margin: 5% auto;
+        border: 2px solid #fff;
+        flex-direction: column;
+        background-color: #9B9CE9;
+        justify-content: space-around;
+        border-radius: 5px;
+        align-items: center;
+        
+        
+    }
+    .row-forms-styles{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .column-row-sectionone-one{
+        display: flex;
+        color: #fff;
+        border-radius: 100px 100px 50px 50px;
+        background-color: #3d348b7a;
+        font-size: 15px;
+        text-align: center;
+        width: 85%;
+        height: 67px;
+     
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    
+    }
+    .files{
+        display: none;
+    }
+    .register-revenue-button{
+        background-color: #F7B801;
+        border: none;
+        border-radius: 800px;
+        width: 250px;
+        height: 55px;
+        color: #000;
+        cursor: pointer;
+    }
+    .register-ingredient-button{
+        background-color: #f7ba0159;
+        border: none;
+        border-radius: 800px;
+        width: 250px;
+        height: 55px;
+        color: #00000088;
+        cursor: not-allowed;
+    }
+    
+}
