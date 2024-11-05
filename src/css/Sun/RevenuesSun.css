@@ -45,5 +45,6 @@
 @media (max-width:750px){
     .header-input-sun-responsive{
         display: flex;
+       
     }
 }

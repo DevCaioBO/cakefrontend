@@ -1,0 +1,180 @@
+.card-display-show{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    min-height: fit-content;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+
+    gap: 15px;
+    border-radius: 5px;
+    
+    padding: 5px;
+   
+}
+.card-display-show > .card-exists-image{
+    display: flex;
+    border-radius:5px;
+    flex-direction: column;
+    background-color: #D6CADD;
+    width: 100%;
+    min-height: fit-content;
+    flex-wrap: wrap;
+   justify-content: center;
+
+    width: 300px;
+    height: 150px;
+
+    
+
+}
+.card-display-show > .card-exists-image div{
+    display: flex;
+  
+    cursor: pointer;
+    
+ 
+   justify-content: center;
+
+  
+
+
+}
+.card-display-show > .card-exists-image > .image-revenues-justify img{
+   
+  
+    border-radius: 5px;
+
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    object-fit: cover;
+    opacity: 0.9;
+
+    transition: opacity .9s ease-in-out;
+
+
+}
+.card-display-show > .card-exists-image:hover > .image-revenues-justify img{
+ 
+
+    opacity: 1;
+   
+    
+    
+
+}
+.p-card-construction:first-child{
+    background-color: #D6CADD;
+    color: #14213d;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px 5px 15px 15px;
+
+}
+.p-card-construction:nth-child(3){
+  
+    background-color: #D6CADD;
+    padding: 5px;
+   
+    
+}
+
+.p-card-ingredients{
+    display: flex;
+    
+
+}
+.p-card-ingredients > button{
+    background-color: #4d4a46;
+    color: #FFFFFF;
+    width: 100%;
+    border: none;
+    border-radius: 0px 0 0 5px ;
+    padding: 5px;
+  
+    cursor: pointer;
+}
+ .p-card-ingredients > button:hover{
+    background-color: #000000;
+
+} 
+.p-card-ingredients > button:nth-child(2){
+  
+    border-radius: 0 0 5px 0 ;
+   
+}
+.p-card-ingredients > button:hover:nth-child(2){
+    background-color: #000000;
+    border-radius: 0 0 5px 0 ;
+    cursor: pointer;
+    
+}
+
+
+/* .p-card-ingredients > button:hover {
+    background-color: #B8860B; /* Dourado mais intenso */
+    /* cursor: pointer; */
+/*  */
+
+.display-register-ingredient{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: darkorange;
+    color: #fff;
+    row-gap: 5px;
+    z-index: 11111;
+    width: 350px;
+    height: fit-content;
+    min-height: 350px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.display-register-ingredient p{
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+/* .display-register-ingredient button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    background-color: #4A0072;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600px;
+
+    transition: all .4s ease-in-out;
+
+} */
+.display-register-ingredient button:hover{
+    transform: scale(1.08);
+   
+
+
+}
+.display-register-ingredient div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.display-register-ingredient div input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    outline: none;
+
+}
+/* card rotate */
+

@@ -6,14 +6,14 @@
     width: 100%;
     align-items: center;
     padding-inline: 15px;
-    color: #fff;
+    color: #000;
     height: 97px;
     justify-content: space-between;
 
-    background-color: #3D348B;
+    background: linear-gradient(#023047);
 }
 .p-sun-mode-one{
-    color: #fff;
+    color: #000000;
 }
 
 .header-input-sun{
@@ -25,13 +25,17 @@
     height: 45px;
     padding-right: 5px;
     border-radius: 5px;
-    background-color: #7678ED;
-    cursor: pointer;
+    background: linear-gradient(to left top , #4a4e69,#36394d)
     
 }
 .lupa-icon-search label,.lupa-icon-search  img{
     width: 35px;
-    height: 25px;
+    height: 35px;
+   
+ 
+
+    
+
 }
 .lupa-icon-search{
     display: flex;
@@ -44,7 +48,7 @@
     border-radius: 5px;
     padding-left: 5px;
 
-    background-color: #7678ED;
+    background: transparent;
 }
 
 .group-box-first-row{
@@ -55,6 +59,7 @@
 }
 .group-box-first-row img {
     cursor: pointer;
+
 }
 .group-box-first-row p {
     font-size: 26px;
