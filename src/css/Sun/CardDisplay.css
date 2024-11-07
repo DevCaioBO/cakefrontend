@@ -13,7 +13,11 @@
     padding: 5px;
    
 }
-.card-display-show > .card-exists-image{
+.card-exists-imager{
+    display: flex;
+    
+}
+ .card-exists-image{
     display: flex;
     border-radius:5px;
     flex-direction: column;
@@ -29,9 +33,9 @@
     
 
 }
-.card-display-show > .card-exists-image div{
+ .card-exists-image div{
     display: flex;
-  
+    
     cursor: pointer;
     
  
@@ -41,10 +45,11 @@
 
 
 }
-.card-display-show > .card-exists-image > .image-revenues-justify img{
+
+ .card-exists-image > .image-revenues-justify img{
    
   
-    border-radius: 5px;
+    
 
     width: 100%;
     height: 200px;
@@ -56,7 +61,7 @@
 
 
 }
-.card-display-show > .card-exists-image:hover > .image-revenues-justify img{
+ .card-exists-image:hover > .image-revenues-justify img{
  
 
     opacity: 1;
@@ -120,23 +125,86 @@
 
 .display-register-ingredient{
     display: flex;
-    position: absolute;
+    position:fixed;
     flex-direction: column;
-    background-color: darkorange;
+    background:linear-gradient(to top right, #2e3138,#4f515c,#2e3138);
     color: #fff;
-    row-gap: 5px;
-    z-index: 11111;
+    inset: 0;
+    z-index: 222;
     width: 350px;
+    height: fit-content;
+
+    margin: 5% auto;
+
+    
     height: fit-content;
     min-height: 350px;
     align-items: center;
     border-radius: 5px;
 }
-
 .display-register-ingredient p{
-    text-transform: uppercase;
-    font-weight: 600;
+    font-size: 15px;
+   text-align: center;
+   padding-inline: 20px;
+   
 
+}
+.display-register-ingredient h3{
+    color: #ffe6a7;
+    font-weight: 700;
+    font-size: 25px;
+
+}
+
+.display-register-ingredient .closeButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 800;
+    box-shadow: 1px 3px 5px #550c18,
+    inset 1px 3px 5px #550c18;
+    border-radius: 500px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    margin: 15% auto;
+    background:linear-gradient(to top right, #49111c,#6f1d1b,#6e0d25);
+    transition: all .5s ease-in-out;
+
+}
+
+.display-register-ingredient .closeButton:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 800;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px 2px #78000067,
+    inset 1px 2px 1px 2px #78000067;
+    border-radius: 500px;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    margin: 15% auto;
+    background:linear-gradient(to top right, #6e0d25,  #49111c, #6f1d1b);
+
+}
+
+
+.tableConstruct > p {
+    display: flex;
+    
+    width: 100px;
+
+}
+.tableConstruct{
+    display: flex;
+    
+    width: 100%;
+    justify-content: center;
 }
 /* .display-register-ingredient button{
     display: flex;
@@ -156,25 +224,71 @@
     transition: all .4s ease-in-out;
 
 } */
-.display-register-ingredient button:hover{
+.viewIngredients button:hover{
     transform: scale(1.08);
-   
-
-
 }
-.display-register-ingredient div {
+
+/* .closeButton{
+    display: flex;
+    padding: 5px;
+    background-color: red;
+    color: #fff;
+    margin-inline:5px;
+} */
+.painel-crud{
     display: flex;
     flex-direction: column;
+    row-gap: 15px;
+    background: linear-gradient(to left bottom, #4141492d,#5558583a);
+    height: fit-content;
+    width: 55px;
+    border-radius: 0 5px 5px 0;
+    align-items: center;
 
 }
+.card-display-show .painel-crud  .closeButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 800px;
+    box-shadow: 1px 3px 5px #550c18,
+    inset 1px 3px 5px #550c18;
 
-.display-register-ingredient div input{
-    border: none;
-    background-color: transparent;
-    border-bottom: 2px solid #fff;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
     color: #fff;
-    outline: none;
+    border: none;
+    margin: 15% auto;
+    background:linear-gradient(to top right, #49111c,#6f1d1b,#6e0d25);
+    transition: all .5s ease-in-out;
 
 }
-/* card rotate */
+
+.editButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 800px;
+    box-shadow: 
+     1px 2px 3px #00b4d8;
+
+    width: fit-content;
+    padding-inline: 4px;
+    height: 30px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    margin: 15% auto;
+    background:linear-gradient(to top right, #03045e,#060886,#070996);
+    transition: all .5s ease-in-out;
+}
+
+@media (max-width:450px){
+    .card-exists-imager{
+        display: flex;
+        width: 250px;
+        margin: 0 auto;
+    }
+}
 

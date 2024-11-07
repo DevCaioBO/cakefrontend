@@ -1,4 +1,4 @@
-import { createElement, useEffect, useState } from 'react';
+import { createElement, useEffect, useRef, useState } from 'react';
 import '../../css/Sun/SectionOne.css';
 import api from '../../services/api';
 
@@ -7,6 +7,7 @@ export default function SectionOne({countShowNone,setCountShowNone}) {
     const [selectedFile, setSelectedFile] = useState(null);
     const [name, setName] = useState('');
     const [imageShow, setImageShow] = useState([]);
+    const buttonSubmitForm = useRef(null);
 
 
     const [description, setDescription] = useState('');
@@ -23,6 +24,8 @@ export default function SectionOne({countShowNone,setCountShowNone}) {
         const getterRevenues = await api.get("/crud/getCake");
         setImageShow(getterRevenues.data);
     };
+   
+
 
 
 
@@ -30,27 +33,34 @@ export default function SectionOne({countShowNone,setCountShowNone}) {
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0])
         const file = event.target.files[0];
+        
+        if(file){
+            
         const elImg = createElement("img")
         const displayImageView = document.querySelector("#file-target-choose")
         const reader = new FileReader();
 
         reader.addEventListener('load',function(e){
             const readerGetter = e.target
-
+     
             const img = document.createElement('img')
             img.src = readerGetter.result
-
+          
             img.classList.add("picture-image-style")
             displayImageView.innerHTML=""
             displayImageView.appendChild(img);
+            
 
         
         })
         reader.readAsDataURL(file)
+        
+    }
 
     };
 
     const handleUpload = async (event) => {
+        
         event.preventDefault(); 
         console.log(description);
         console.log(name);
@@ -110,11 +120,11 @@ export default function SectionOne({countShowNone,setCountShowNone}) {
                   
                     onChange={handleFileChange}
                 />
+                {name !="" && description!="" && selectedFile !=null?
                             <div className='buttons-register-revenues'>
-                <button type="submit" className='register-revenue-button'>Cadastrar receita</button>
-
-              
-            </div>
+                <button type="submit" className='register-revenue-button' ref={buttonSubmitForm} >Cadastrar receita</button>
+            </div>:""
+             }
             </div>
 
 

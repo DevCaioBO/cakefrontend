@@ -164,18 +164,30 @@ textarea{
     .form-sun-mode-body{
         display: flex;
         width: 400px;
-        height: 500px;
-        
+        height: 450px;
         min-height: fit-content;
         margin: 5% auto;
-      
+        border: 2px solid #fff;
         flex-direction: column;
-        background-color: #3D348B;
-        justify-content: space-around;
+        background-color: #4a4e69;
         border-radius: 5px;
         align-items: center;
         
         
+    }
+    textarea{
+        resize:vertical;
+        max-block-size: 150px;
+        max-lines: 10;
+        border: none;
+        outline: none;
+        width: 300px;
+        background-color: #4a4e69;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: 700;
+    
     }
     .row-forms-styles{
         display: flex;
@@ -185,7 +197,7 @@ textarea{
      
     }
 
-    .column-row-sectionone-one{
+    /* .column-row-sectionone-one{
         display: flex;
         color: #fff;
         border-radius: 100px 100px 50px 50px;
@@ -198,19 +210,25 @@ textarea{
         margin-top: 5px;
         margin-bottom: 5px;
     
-    }
+    } */
     .files{
         display: flex;
-        width: 300px;
-        height: 200px;
-        
-        background-color: rgba(255, 255, 0, 0.233);
+        min-height: 150px;
+        min-width: 150px;
+       
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff3a;
        
         border: 2px dashed #ffffff65;
         cursor: pointer;
     
     
         transition: all .4s ease-in-out;
+    }
+    .files span{
+        display: flex;
+    
     }
     .picture-img{
         max-width: 100%;
@@ -228,33 +246,46 @@ textarea{
 @media (max-width:425px){
     .form-sun-mode-body{
         display: flex;
-        width: 300px;
-        height: 600px;
+        width: 350px;
+        height: 400px;
         min-height: fit-content;
         margin: 5% auto;
         border: 2px solid #fff;
         flex-direction: column;
-        background-color: #3D348B;
-        justify-content: space-around;
+        background-color: #4a4e69;
         border-radius: 5px;
         align-items: center;
         
         
     }
+    textarea{
+        resize:vertical;
+        max-block-size: 150px;
+        max-lines: 10;
+        border: none;
+        outline: none;
+        width: 250px;
+        background-color: #4a4e69;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: 700;
+    
+    }
     .row-forms-styles{
         display: flex;
         flex-wrap: wrap;
-
+        gap: 25px;
+       
+     
     }
 
-    .column-row-sectionone-one{
+    /* .column-row-sectionone-one{
         display: flex;
         color: #fff;
         border-radius: 100px 100px 50px 50px;
         background-color: #3d348b7a;
-        font-size: 15px;
-        text-align: center;
-        width: 85%;
+        width: 90%;
         height: 67px;
      
         justify-content: center;
@@ -262,34 +293,63 @@ textarea{
         margin-top: 5px;
         margin-bottom: 5px;
     
-    }
-
-    .register-revenue-button{
-        background-color: #F7B801;
-        border: none;
-        border-radius: 800px;
-        width: 250px;
-        height: 55px;
-        color: #000;
-        cursor: pointer;
-    }
-    .register-ingredient-button{
-        background-color: #f7ba0159;
-        border: none;
-        border-radius: 800px;
-        width: 250px;
-        height: 55px;
-        color: #00000088;
-        cursor: not-allowed;
-    }
+    } */
     .files{
         display: flex;
-        width: 200px;
-        height: 150px;
-        background-color: rgba(255, 255, 0, 0.356);
+        min-height: 150px;
+        min-width: 150px;
+       
         justify-content: center;
         align-items: center;
-        border: 2px dashed #fff;
+        background-color: #ffffff3a;
+       
+        border: 2px dashed #ffffff65;
+        cursor: pointer;
+    
+    
+        transition: all .4s ease-in-out;
+    }
+    .files span{
+        display: flex;
+    
+    }
+    .picture-img{
+        max-width: 100%;
+        height: 100%;
+          
+    
+    
+    }
+    .file-target-choose{
+        max-width: 100%;
+    }
+    .column-row-sectionone-one{
+
+        color: #f4fdff;
+      
+        margin-top: 5px;
+        border-radius: 5px ;
+        padding: 5px;
+        font-weight: bold;
+    
+        font-size: 15px;
+    
+       
+    
+    
+    }
+    .register-revenue-button{
+        background: linear-gradient(to bottom right,#90e0ef,#0077b6);
+        color: #03045e;
+        font-weight: 600;
+        border: none;
+        font-size: 25px;
+        border-radius: 5px;
+        width: 300px;
+        height: 55px;
+        box-shadow: 1px 3px 5px #14213d;
+    
+        cursor: pointer;
     }
     
 }
