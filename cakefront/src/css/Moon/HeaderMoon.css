@@ -1,0 +1,77 @@
+#header-component-box-moon{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-inline: 15px;
+    color: #fff;
+    height: 97px;
+    justify-content: space-between;
+
+    background-color: #000;
+}
+
+.p-moon-mode-one{
+    color: #F7B801;
+}
+
+.header-input-moon{
+    display: flex;
+    width: 824px;
+
+    gap: 15px;
+    width: 60%;
+    height: 45px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    
+}
+.lupa-icon-search label,.lupa-icon-search  img{
+    width: 35px;
+    height: 25px;
+}
+.lupa-icon-search{
+    display: flex;
+    align-items: center;
+}
+.header-input-moon input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+
+    background-color: #fff;
+}
+
+.group-box-first-row{
+    display: flex;
+    align-items: center;
+    width: 900px;
+    gap: 20px;
+}
+.group-box-first-row img {
+    cursor: pointer;
+}
+.group-box-first-row p {
+    font-size: 26px;
+}
+/* SEGUNDA ROW DO LADO DO SOL */
+.group-box-second-row{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.p-moon-mode-two{
+    color: #FF7B28;
+}
+
+@media (max-width:750px){
+    .header-input-moon{
+        display: none;
+        
+    }
+}
