@@ -73,7 +73,7 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
             console.error('não colocou nada nos forms');
             setIsDisabled(false);
             return;
-        }else if(description.length <20 ||description.length >1200 || name.length <5 || name.length >30){
+        }else if(description.length <20 ||description.length >1200 || name.length <5 || name.length >45){
             console.error('TA ACHANDO QUE ESSE CAMPO É GIGANTE?' + description.length);
             setIsDisabled(false);
             buttonSubmitForm.current.style.display ="none"
