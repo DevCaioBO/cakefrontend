@@ -8,7 +8,7 @@ import '../../css/Sun/RevenuesSun.css'
 import '../../css/Moon/RevenuesMoon.css'
 import Skeleton from "../consumo/Skeleton.jsx"
 import { useState,useEffect} from "react"
-import CardDisplay from "../../components/cardShow/cardDisplay.jsx"
+import CardDisplay from "/src/components/cardShow/cardDisplay.jsx";
 export default function Revenues(){
     const [Mode,setMode] = useState(SunIcon)
     const [inputRevenuesValue,setInputRevenuesValue] = useState("");
