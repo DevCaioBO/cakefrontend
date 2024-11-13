@@ -10,10 +10,11 @@
     height: 97px;
     justify-content: space-between;
 
-    background: linear-gradient(#023047);
+    background: rgba(61, 52, 139, 1);
+    transition: all .7s ease-in-out;
 }
 .p-sun-mode-one{
-    color: #000000;
+    color: #fff;
 }
 
 .header-input-sun{
@@ -25,7 +26,7 @@
     height: 45px;
     padding-right: 5px;
     border-radius: 5px;
-    background: linear-gradient(to left top , #4a4e69,#36394d)
+    background: rgba(245, 245, 245, 1);
     
 }
 .lupa-icon-search label,.lupa-icon-search  img{
@@ -71,6 +72,10 @@
     font-size: 20px;
     align-items: center;
     cursor: pointer;
+}
+.group-box-second-row img{
+    width: 25px;
+    height: 25px;
 }
 .p-sun-mode-two{
     color: #fff;

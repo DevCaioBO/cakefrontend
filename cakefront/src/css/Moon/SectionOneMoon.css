@@ -1,6 +1,6 @@
 
 /* Alinhamento do formulário */
-.form-sun-mode-body{
+.form-sun-mode-body-Moon{
     display: flex;
     width: 500px;
     height: 500px;
@@ -8,7 +8,7 @@
     margin: 5% auto;
  
     flex-direction: column;
-    background-color: rgba(61, 52, 139, 1);
+    background-color: rgba(0, 37, 118, 1);
     border-radius: 5px;
     align-items: center;
     transition: all .9s ease-in-out;

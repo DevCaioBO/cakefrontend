@@ -16,7 +16,7 @@ export default function CardDisplay({ inputRevenuesValue, countShowNone, setCoun
     const [idIng, setIdeIng] = useState(0)
     const [qtdIngredientModify, setQtdIngredientModify] = useState("")
     const [nameIngredientModify, setNameIngredientModify] = useState("")
-
+    const [buttonIsDisabled,setbuttonIsDisabled] = useState(false)
     // Encontrar a receita correspondente e configurar os valores iniciais
     useEffect(() => {
         const selectedRecipe = imageShow.find((recipe) => recipe.id_Caker === ideCaker);
@@ -106,6 +106,7 @@ export default function CardDisplay({ inputRevenuesValue, countShowNone, setCoun
     }
 
     const postIngredients = async (e) => {
+        setbuttonIsDisabled(true)
         e.preventDefault();
 
         // console.log("ides " + ideCaker)
@@ -136,6 +137,7 @@ export default function CardDisplay({ inputRevenuesValue, countShowNone, setCoun
         getterLoadById(ideCaker)
         setCountShowNone(6)
         showFormIngredient(ideCaker)
+        setbuttonIsDisabled(false)
 
     }
 
@@ -314,7 +316,7 @@ export default function CardDisplay({ inputRevenuesValue, countShowNone, setCoun
                         </div>
                     </div>
 
-                    <button type="submit" className="new-ingredient-button" onClick={postIngredients} >+</button>
+                    <button type="submit" className="new-ingredient-button" onClick={postIngredients} disabled={buttonIsDisabled}>+</button>
 
 
                 </div>
@@ -557,8 +559,10 @@ export default function CardDisplay({ inputRevenuesValue, countShowNone, setCoun
 
             }
 
-
-            {imageShow.filter((values) => values.nomeReceita.includes(inputRevenuesValue)).map((e, index) => (
+            {/* <p>Receitas recomendadas: </p> */}
+            {
+                
+            imageShow.filter((values) => values.nomeReceita.includes(inputRevenuesValue)).map((e, index) => (
                 <div key={e.id_Caker} className="card-exists-imager">
                     <div key={e.id_Caker} className="card-exists-image" style={{ '--quantity': imageShow.length }} >
                         <div className="image-revenues-justify">

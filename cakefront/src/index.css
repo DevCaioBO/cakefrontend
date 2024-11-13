@@ -17,17 +17,21 @@ html,body,#root{
   width: 100%;
   min-height: calc(var(--vh) * 100);
   height: fit-content;
- 
+  transition: all .9s ease-in-out;
 
 
   background-color: #ffffff;
 
 }
+main{
+  height: 50dvi;
+  min-height: fit-content;
+}
 .moon-background{
   width: 100%;
   min-height: calc(var(--vh) * 100);
   height: fit-content;
- 
+  transition: all .9s ease-in-out;
   background-color: #111111;
 }
 
@@ -38,13 +42,20 @@ html,body,#root{
   
   width: 100%;
   
-  background-color: black;
+  background-color: rgba(61, 52, 139, 1);
   color: #c7a40b;
   margin-top:calc(var(--vh) * 20) ;
   
  
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+@media (max-width:760px){
+  main{
+    height: 100dvi;
+    min-height: fit-content;
+  }
 }
 
 

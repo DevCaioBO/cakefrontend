@@ -2,8 +2,8 @@ import Header from "../../components/cabecalho/Header.jsx"
 import SectionOne from '../../components/SectionOne/SectionOne.jsx'
 import CrownLogo from '../../assets/img/crown.svg'
 import Lupa from '../../assets/img/searchwhite.png'
-import SunIcon from '../../assets/img/sunMode.svg'
-import MoonIcon from '../../assets/img/moon.svg'
+import MoonIcon  from '../../assets/img/switch.png'
+import SunIcon  from '../../assets/img/togglemode.png'
 import '../../css/Sun/RevenuesSun.css'
 import '../../css/Moon/RevenuesMoon.css'
 import Skeleton from "../consumo/Skeleton.jsx"
@@ -47,7 +47,7 @@ export default function Revenues(){
                     
                     <main>
                         <div>
-                            {inputRevenuesValue ==""?<SectionOne countShowNone={countShowNone} setCountShowNone={setCountShowNone} />:""
+                            {inputRevenuesValue ==""?<SectionOne countShowNone={countShowNone} setCountShowNone={setCountShowNone} SunIcon={Mode} />:""
                             }
                         <CardDisplay  inputRevenuesValue={inputRevenuesValue} countShowNone={countShowNone} setCountShowNone={setCountShowNone}/>
                         </div>

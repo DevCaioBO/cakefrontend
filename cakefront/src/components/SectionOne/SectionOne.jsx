@@ -1,13 +1,17 @@
 import { createElement, useEffect, useRef, useState } from 'react';
 import '../../css/Sun/SectionOne.css';
+import '../../css/Moon/SectionOneMoon.css';
 import api from '../../services/api';
+import Moon  from '../../assets/img/switch.png'
+import  Sun from '../../assets/img/togglemode.png'
 
-export default function SectionOne({countShowNone,setCountShowNone}) {
+export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
  
     const [selectedFile, setSelectedFile] = useState(null);
     const [name, setName] = useState('');
     const [imageShow, setImageShow] = useState([]);
     const buttonSubmitForm = useRef(null);
+    const [isDisabled,setIsDisabled] = useState(false);
 
 
     const [description, setDescription] = useState('');
@@ -60,13 +64,19 @@ export default function SectionOne({countShowNone,setCountShowNone}) {
     };
 
     const handleUpload = async (event) => {
-        
+         setIsDisabled(true);
         event.preventDefault(); 
         console.log(description);
         console.log(name);
         console.log(selectedFile)
-        if (!selectedFile || !name || !description) {
+        if (!selectedFile || !name || !description ) {
             console.error('não colocou nada nos forms');
+            setIsDisabled(false);
+            return;
+        }else if(description.length <20 ||description.length >1200 || name.length <5 || name.length >30){
+            console.error('TA ACHANDO QUE ESSE CAMPO É GIGANTE?' + description.length);
+            setIsDisabled(false);
+            buttonSubmitForm.current.style.display ="none"
             return;
         }
 
@@ -90,13 +100,15 @@ export default function SectionOne({countShowNone,setCountShowNone}) {
             setSelectedFile(null);
             setName('');
             setDescription('');
+            setIsDisabled(false);
+           
         } catch (error) {
             console.error('Error uploading file:', error);
         }
     };
 
     return (
-        <form className="form-sun-mode-body" onSubmit={handleUpload}>
+        <form className={SunIcon==Sun?"form-sun-mode-body":"form-sun-mode-body-Moon"} onSubmit={handleUpload}>
             <div className='column-row-sectionone-one'>
                 <h2>CADASTRE SUA RECEITA</h2>
             </div>
@@ -122,7 +134,7 @@ export default function SectionOne({countShowNone,setCountShowNone}) {
                 />
                 {name !="" && description!="" && selectedFile !=null?
                             <div className='buttons-register-revenues'>
-                <button type="submit" className='register-revenue-button' ref={buttonSubmitForm} >Cadastrar receita</button>
+                <button type="submit" className='register-revenue-button' ref={buttonSubmitForm} disabled={isDisabled}>Cadastrar receita</button>
             </div>:""
              }
             </div>

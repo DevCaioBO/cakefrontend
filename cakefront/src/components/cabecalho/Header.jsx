@@ -1,7 +1,7 @@
 import '../../css/Sun/HeaderSun.css'
 import '../../css/Moon/HeaderMoon.css'
-import Sun from '../../assets/img/sunMode.svg'
-import Moon from '../../assets/img/moon.svg'
+import Moon  from '../../assets/img/switch.png'
+import  Sun from '../../assets/img/togglemode.png'
 import { useState } from 'react'
 // import '../../css/Moon/HeaderMoon.css'
 

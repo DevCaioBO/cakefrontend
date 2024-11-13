@@ -26,7 +26,7 @@
     min-height: fit-content;
     flex-wrap: wrap;
    justify-content: center;
-
+   overflow: hidden; 
     width: 300px;
     height: 150px;
 
@@ -40,6 +40,7 @@
     
  
    justify-content: center;
+   overflow: hidden; 
 
   
 
@@ -56,8 +57,9 @@
     background-size: cover;
     object-fit: cover;
     opacity: 0.9;
-
-    transition: opacity .9s ease-in-out;
+    overflow: hidden; 
+    scale: 1.00;
+    transition: all .4s ease-in-out;
 
 
 }
@@ -65,6 +67,10 @@
  
 
     opacity: 1;
+    overflow: hidden;
+    scale: 1.13;
+ 
+    background-size: cover;
    
     
     
@@ -92,7 +98,7 @@
 
 }
 .p-card-ingredients > button{
-    background-color: #4d4a46;
+    background-color: rgba(61, 52, 139, 1);
     color: #FFFFFF;
     width: 100%;
     border: none;
@@ -100,6 +106,7 @@
     padding: 5px;
   
     cursor: pointer;
+    transition: all .5s ease-in-out;
 }
  .p-card-ingredients > button:hover{
     background-color: #000000;
@@ -130,7 +137,7 @@
     background:rgb(61, 60, 60);
     color: #fff;
     inset: 0;
-   height: fit-content;
+
    align-items: center;
 
     z-index: 222;
@@ -141,7 +148,7 @@
 
     
    
-    height: 300px;
+    height: 65%;
     
     
     border-radius: 5px;
@@ -224,7 +231,10 @@
     color: #fff;
     margin: 4% auto;
     border-radius: 5px;
-    height: 35px;
+    min-height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
     background-color: rgb(11, 141, 11);
     border: none;
     cursor: pointer;
@@ -825,7 +835,7 @@
     position: fixed;
     flex-direction: column;
     background-color: #780000;
-    width: 400px;
+    width: 70%;
     height: 250px;
     justify-content: center;
     align-items: center;
