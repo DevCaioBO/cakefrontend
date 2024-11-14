@@ -46,18 +46,23 @@ export default function Revenues(){
                     </div>
                     
                     <main>
+                        
                         <div>
+                            
                             {inputRevenuesValue ==""?<SectionOne countShowNone={countShowNone} setCountShowNone={setCountShowNone} SunIcon={Mode} />:""
                             }
+                            <p className="allRevenues">Todas as Receitas</p>
                         <CardDisplay  inputRevenuesValue={inputRevenuesValue} countShowNone={countShowNone} setCountShowNone={setCountShowNone}/>
                         </div>
+                        
                     </main>
 
                     <footer className="footer-sunMode">
-                        <div>
+                        <div className="footer-credits">
                     <div>@DevCaioBO</div>
                     <div>@Lara Magalhães</div>
                     </div>
+                        <p>@ 2024 Cake King. Todos os direitos reservados</p>
                     
                     </footer>
         </div>
