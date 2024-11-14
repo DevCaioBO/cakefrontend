@@ -53,7 +53,13 @@ export default function Revenues(){
                         </div>
                     </main>
 
-                    <footer className="footer-sunMode">@DevCaioBO</footer>
+                    <footer className="footer-sunMode">
+                        <div>
+                    <div>@DevCaioBO</div>
+                    <div>@Lara Magalhães</div>
+                    </div>
+                    
+                    </footer>
         </div>
     )
 }
