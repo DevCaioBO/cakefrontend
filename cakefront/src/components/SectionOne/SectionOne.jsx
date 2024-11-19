@@ -65,18 +65,25 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
 
     const handleUpload = async (event) => {
          setIsDisabled(true);
+         
+         console.log("desabilitei aqui 68:js")
+         debugger;
         event.preventDefault(); 
+        
         console.log(description);
         console.log(name);
         console.log(selectedFile)
         if (!selectedFile || !name || !description ) {
             console.error('não colocou nada nos forms');
             setIsDisabled(false);
+            console.log("habilitei aqui 76:js")
+            debugger;
             return;
-        }else if(description.length <20 ||description.length >1200 || name.length <5 || name.length >45){
+        }else if(description.length <20 ||description.length >1200 ||   name.length >45){
             console.error('TA ACHANDO QUE ESSE CAMPO É GIGANTE?' + description.length);
             setIsDisabled(false);
-            buttonSubmitForm.current.style.display ="none"
+            console.log("habilitei aqui 81:js")
+            debugger;
             return;
         }
 
@@ -101,6 +108,8 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
             setName('');
             setDescription('');
             setIsDisabled(false);
+            console.log("habilitei aqui 106:js")
+            debugger;
            
         } catch (error) {
             console.error('Error uploading file:', error);
@@ -108,7 +117,7 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
     };
 
     return (
-        <form className={SunIcon==Sun?"form-sun-mode-body":"form-sun-mode-body-Moon"} onSubmit={handleUpload}>
+        <form className={SunIcon==Sun?"form-sun-mode-body":"form-moon-mode-body"} onSubmit={handleUpload}>
             <div className='column-row-sectionone-one'>
                 <h2>CADASTRE SUA RECEITA</h2>
             </div>

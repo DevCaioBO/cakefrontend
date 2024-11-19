@@ -76,11 +76,14 @@
     
 
 }
-.p-card-construction:first-child{
+.p-card-construction{
+    display: flex;
+    justify-content: center;
+    text-align: center;
     background-color: #D6CADD;
     color: #14213d;
     font-weight: 600;
-    text-transform: uppercase;
+   
     border-radius: 5px 5px 15px 15px;
 
 }
@@ -375,6 +378,11 @@
     font-size: 30px;
     
 
+}
+.justify-name-revenue{
+    display: flex;
+    justify-content: center;
+    background-color: red;
 }
 .button-modal-register-ingredient button:nth-child(1){
     width: 135px;

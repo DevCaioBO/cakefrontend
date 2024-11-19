@@ -1,6 +1,6 @@
 
 /* Alinhamento do formulário */
-.form-sun-mode-body-Moon{
+.form-moon-mode-body{
     display: flex;
     width: 500px;
     height: 500px;
@@ -180,7 +180,7 @@ textarea{
 }
 
 @media (max-width:750px){
-    .form-sun-mode-body{
+    .form-moon-mode-body{
         display: flex;
         width: 425px;
         height: 450px;
@@ -188,7 +188,7 @@ textarea{
         margin: 5% auto;
         border: 2px solid #fff;
         flex-direction: column;
-        background-color: #4a4e69;
+        background-color: #0c1b7e;
         border-radius: 5px;
         align-items: center;
         
@@ -263,7 +263,7 @@ textarea{
 }
 
 @media (max-width:425px){
-    .form-sun-mode-body{
+    .form-moon-mode-body{
         display: flex;
         width: 325px;
         height: 400px;
@@ -271,7 +271,7 @@ textarea{
         margin: 5% auto;
       
         flex-direction: column;
-        background-color: #4a4e69;
+        background-color: #13217a;
         border-radius: 5px;
         align-items: center;
         

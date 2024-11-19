@@ -299,20 +299,7 @@ textarea{
      
     }
 
-    /* .column-row-sectionone-one{
-        display: flex;
-        color: #fff;
-        border-radius: 100px 100px 50px 50px;
-        background-color: #3d348b7a;
-        width: 90%;
-        height: 67px;
-     
-        justify-content: center;
-        align-items: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    
-    } */
+   
     .files{
         display: flex;
         min-height: 150px;
