@@ -13,6 +13,7 @@ export default function Revenues(){
     const [Mode,setMode] = useState(SunIcon)
     const [inputRevenuesValue,setInputRevenuesValue] = useState("");
     const [countShowNone,setCountShowNone] = useState(0)
+    const [imageShow,setImageShow] = useState([])
   
     const toggleMode = () =>{
         if(Mode ==SunIcon){
@@ -49,10 +50,10 @@ export default function Revenues(){
                         
                         <div>
                             
-                            {inputRevenuesValue ==""?<SectionOne countShowNone={countShowNone} setCountShowNone={setCountShowNone} SunIcon={Mode} />:""
+                            {inputRevenuesValue ==""?<SectionOne countShowNone={countShowNone} setCountShowNone={setCountShowNone} SunIcon={Mode} setImageShow={setImageShow} imageShow={imageShow}/>:""
                             }
                             <p className="allRevenues">Todas as Receitas</p>
-                        <CardDisplay  inputRevenuesValue={inputRevenuesValue} countShowNone={countShowNone} setCountShowNone={setCountShowNone}/>
+                        <CardDisplay  inputRevenuesValue={inputRevenuesValue} countShowNone={countShowNone} setCountShowNone={setCountShowNone} setImageShow={setImageShow} imageShow={imageShow}/>
                         </div>
                         
                     </main>

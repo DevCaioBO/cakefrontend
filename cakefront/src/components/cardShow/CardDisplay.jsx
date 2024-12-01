@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import '../../css/Sun/CardDisplay.css'
 import penEdit from '../../assets/img/penEdit.png'
+import penRed from '../../assets/img/penBlue.png'
+import trashRed from '../../assets/img/trashRed.png'
 import api from "../../services/api";
-export default function CardDisplay({ inputRevenuesValue, countShowNone, setCountShowNone }) {
-    const [imageShow, setImageShow] = useState([]);
+export default function CardDisplay({ inputRevenuesValue, countShowNone, setCountShowNone,setImageShow,imageShow }) {
+    // const [imageShow, setImageShow] = useState([]);
     const [revenueIngredients, setRevenuesIngredients] = useState([]);
     const [revenuesById, setRevenuesById] = useState([])
     const [nameIngredient, setNameIngredient] = useState("")
@@ -17,7 +19,7 @@ export default function CardDisplay({ inputRevenuesValue, countShowNone, setCoun
     const [qtdIngredientModify, setQtdIngredientModify] = useState("")
     const [nameIngredientModify, setNameIngredientModify] = useState("")
     const [buttonIsDisabled,setbuttonIsDisabled] = useState(false)
-    // Encontrar a receita correspondente e configurar os valores iniciais
+  
     useEffect(() => {
         const selectedRecipe = imageShow.find((recipe) => recipe.id_Caker === ideCaker);
         if (selectedRecipe) {
@@ -579,8 +581,8 @@ export default function CardDisplay({ inputRevenuesValue, countShowNone, setCoun
 
                     </div>
                     <div className="painel-crud">
-                        <button className="closeButton" onClick={() => showDeleteRevenue(e.id_Caker)}>X</button>
-                        <button className="editButton" onClick={() => showFormModify(e.id_Caker)}>Editar</button>
+                        <button className="closeButton" onClick={() => showDeleteRevenue(e.id_Caker)}><img src={trashRed}/></button>
+                        <button className="editButton" onClick={() => showFormModify(e.id_Caker)}><img src={penRed}/></button>
                     </div>
 
                 </div>

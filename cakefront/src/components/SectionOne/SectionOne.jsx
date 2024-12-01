@@ -5,11 +5,11 @@ import api from '../../services/api';
 import Moon  from '../../assets/img/switch.png'
 import  Sun from '../../assets/img/togglemode.png'
 
-export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
+export default function SectionOne({countShowNone,setCountShowNone,SunIcon,setImageShow,imageShow}) {
  
     const [selectedFile, setSelectedFile] = useState(null);
     const [name, setName] = useState('');
-    const [imageShow, setImageShow] = useState([]);
+    // const [imageShow, setImageShow] = useState([]);
     const buttonSubmitForm = useRef(null);
     const [isDisabled,setIsDisabled] = useState(false);
 
@@ -37,13 +37,9 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0])
         const file = event.target.files[0];
-        
         if(file){
-            
-        // const elImg = createElement("img")
         const displayImageView = document.querySelector("#file-target-choose")
         const reader = new FileReader();
-
         reader.addEventListener('load',function(e){
             const readerGetter = e.target
      
@@ -53,37 +49,24 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
             img.classList.add("picture-image-style")
             displayImageView.innerHTML=""
             displayImageView.appendChild(img);
-            
-
-        
         })
         reader.readAsDataURL(file)
-        
     }
 
     };
-
     const handleUpload = async (event) => {
          setIsDisabled(true);
-         
-         console.log("desabilitei aqui 68:js")
-         debugger;
         event.preventDefault(); 
-        
-        console.log(description);
-        console.log(name);
-        console.log(selectedFile)
+        try {
         if (!selectedFile || !name || !description ) {
-            console.error('não colocou nada nos forms');
             setIsDisabled(false);
-            console.log("habilitei aqui 76:js")
-            debugger;
+
             return;
         }else if(description.length <20 ||description.length >1200 ||   name.length >45){
             console.error('TA ACHANDO QUE ESSE CAMPO É GIGANTE?' + description.length);
             setIsDisabled(false);
             console.log("habilitei aqui 81:js")
-            debugger;
+     
             return;
         }
 
@@ -93,7 +76,7 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
         formData.append('descricao', description);
         
 
-        try {
+        
             const response = await api.post('/crud/postCake', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
@@ -101,18 +84,20 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
                 
             });
             console.log('File uploaded successfully:', response.data);
-            // Recarrega as imagens após o upload
-            location.reload()
-            // Limpa os campos após o upload
+
+
+          
+            console.log("habilitei aqui 106:js")
+           
+           
+        } 
+        finally{
             setSelectedFile(null);
             setName('');
             setDescription('');
             setIsDisabled(false);
-            console.log("habilitei aqui 106:js")
-            debugger;
-           
-        } catch (error) {
-            console.error('Error uploading file:', error);
+            getterLoad()
+            location.reload()
         }
     };
 
@@ -124,10 +109,10 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
             <div className='row-forms-styles'>
                 <div className='column-register-revenues'>
                 <label htmlFor='prepare-mode-input'>Modo de preparo:</label>
-                <textarea type="text" id='prepare-mode-input'  value={description} onChange={(e) => setDescription(e.target.value) } />
+                <textarea type="text" id='prepare-mode-input'  value={description} onChange={(e) => setDescription(e.target.value) } placeholder="Campo Obrigatório*" />
                     <label htmlFor='prepare-mode-input-name'>Nome:</label>
                     
-                    <input type="text" id='prepare-mode-input-name' value={name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" id='prepare-mode-input-name' value={name} onChange={(e) => setName(e.target.value)} placeholder="Campo Obrigatório*" />
                     
                 </div>
                 <label className='files' htmlFor='input-file-multipart' tabIndex={0}>
@@ -141,11 +126,11 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon}) {
                   
                     onChange={handleFileChange}
                 />
-                {name !="" && description!="" && selectedFile !=null?
+               
                             <div className='buttons-register-revenues'>
-                <button type="submit" className='register-revenue-button' ref={buttonSubmitForm} disabled={isDisabled}>Cadastrar receita</button>
-            </div>:""
-             }
+                <button type={name !="" && description!="" && selectedFile !=null?"submit":"button"} style={name !="" && description!="" && selectedFile !=null?{opacity:1,cursor:'pointer'}:{opacity:0.4,cursor:'not-allowed'}} className='register-revenue-button' ref={buttonSubmitForm} disabled={isDisabled}>Cadastrar receita</button>
+            </div>
+             
             </div>
 
 

@@ -6,7 +6,6 @@
     height: 500px;
     min-height: fit-content;
     margin: 5% auto;
- 
     flex-direction: column;
     background-color: rgba(61, 52, 139, 1);
     border-radius: 5px;
@@ -51,6 +50,9 @@
 .column-register-revenues input{
     color: #fff;
 }
+.column-register-revenues input::placeholder{
+    color: red;
+}
 .files{
     display: flex;
     min-height: 150px;
@@ -82,6 +84,10 @@ textarea{
     color: #000;
     border-radius: 5px;
     font-weight: 700;
+
+}
+textarea::placeholder{
+    color: red;
 
 }
 
