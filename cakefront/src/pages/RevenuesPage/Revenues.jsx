@@ -60,7 +60,7 @@ export default function Revenues(){
 
                     <footer className="footer-sunMode">
                         <div className="footer-credits">
-                    <div>@DevCaioBO</div>
+                    <div>Caio Bueno Oliveira</div>
                     <div>@Lara Magalhães</div>
                     </div>
                         <p>@ 2024 Cake King. Todos os direitos reservados</p>
