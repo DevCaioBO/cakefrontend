@@ -23,7 +23,6 @@ export default function Revenues(){
         }
     }
     useEffect(() => {
-        // Define a altura da viewport de forma dinâmica
         const setVhProperty = () => {
             const vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -32,7 +31,7 @@ export default function Revenues(){
         setVhProperty();
         window.addEventListener('resize', setVhProperty);
 
-        // Limpa o evento quando o componente desmonta
+
         return () => window.removeEventListener('resize', setVhProperty);
     }, []);
     

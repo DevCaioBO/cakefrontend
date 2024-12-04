@@ -109,10 +109,10 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon,setIm
             <div className='row-forms-styles'>
                 <div className='column-register-revenues'>
                 <label htmlFor='prepare-mode-input'>Modo de preparo:</label>
-                <textarea type="text" id='prepare-mode-input'  value={description} onChange={(e) => setDescription(e.target.value) } placeholder="Campo Obrigatório*" />
+                <textarea type="text" id='prepare-mode-input'  value={description} onChange={(e) => setDescription(e.target.value) } placeholder="Campo Obrigatório*" autoComplete='off' />
                     <label htmlFor='prepare-mode-input-name'>Nome:</label>
                     
-                    <input type="text" id='prepare-mode-input-name' value={name} onChange={(e) => setName(e.target.value)} placeholder="Campo Obrigatório*" />
+                    <input type="text" id='prepare-mode-input-name' value={name} onChange={(e) => setName(e.target.value)} placeholder="Campo Obrigatório*" autoComplete='off' />
                     
                 </div>
                 <label className='files' htmlFor='input-file-multipart' tabIndex={0}>
@@ -128,7 +128,9 @@ export default function SectionOne({countShowNone,setCountShowNone,SunIcon,setIm
                 />
                
                             <div className='buttons-register-revenues'>
-                <button type={name !="" && description!="" && selectedFile !=null?"submit":"button"} style={name !="" && description!="" && selectedFile !=null?{opacity:1,cursor:'pointer'}:{opacity:0.4,cursor:'not-allowed'}} className='register-revenue-button' ref={buttonSubmitForm} disabled={isDisabled}>Cadastrar receita</button>
+                                
+                <button type={name !="" && description!="" && selectedFile !=null?"submit":"button"} style={name !="" && description!="" && selectedFile !=null?{display:"block",cursor:'pointer'}:{display:"none",cursor:'not-allowed'}} className='register-revenue-button' ref={buttonSubmitForm} disabled={isDisabled}>Cadastrar receita</button>
+                                
             </div>
              
             </div>

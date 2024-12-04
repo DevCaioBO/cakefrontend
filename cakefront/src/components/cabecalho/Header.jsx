@@ -16,7 +16,7 @@ export default function Header({image,lupa,SunIcon,toggleMode,inputRevenuesValue
     <div id={SunIcon==Sun?'header-component-box-sun':'header-component-box-moon'} >
         <div className="group-box-first-row">
             <img src={image} alt="" className='img' />
-            <p className={SunIcon==Sun?'p-sun-mode-one':'p-moon-mode-one'}>KOALU KING</p>
+            <p className={SunIcon==Sun?'p-sun-mode-one':'p-moon-mode-one'}>CAKE KING</p>
             <div className={SunIcon==Sun?'header-input-sun':'header-input-moon'}>
             <input type="text" id='search-input-sun' value={inputRevenuesValue} onChange={handleChangeRevenue}/>
             <div className='lupa-icon-search'>
